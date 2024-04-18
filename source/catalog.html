@@ -16,13 +16,13 @@
         <img class="logo__image" src="./images/logo-desktop.svg" width="202" height="59" alt="Logo">
       </a>
       <ul class="navigation__list">
-        <li class="navigation__item navigation__item--current">
+        <li class="navigation__item ">
           <a class="navigation__link" href="index.html">
             главная
           </a>
 
         </li>
-        <li class="navigation__item">
+        <li class="navigation__item navigation__item--current">
           <a class="navigation__link" href="catalog.html">
             каталог продукции
           </a>
@@ -251,10 +251,13 @@
 
     <section class="subcription">
       <h2 class="subcription__title">Акции и новинки</h2>
-      <p class="subcription__description"></p>
+      <p class="subcription__description">
+        Подпишитесь на наши новости и не пропустите ни одного предложения!
+      </p>
       <form class="subcription__form" action="#">
-        <label class="visually-hidden" for="email"></label>
-        <input class="subcription__control" id="email" name="email" placeholder="KUKLACHEV@GMAIL.COM">
+        <label for="email">
+          <input class="subcription__control" id="email" name="email" placeholder="KUKLACHEV@GMAIL.COM">
+        </label>
         <button class="subcription__button button" type="submit">подписаться</button>
       </form>
     </section>
@@ -272,23 +275,23 @@
     </section>
   </main>
 
-  <footer class="main-footer">
-    <a class="main-footer__logo logo" href="#">
-      <img class="logo__image" src="./images/footer-logo.svg" width="202" height="59" alt="Logo">
-    </a>
-    <ul class="main-footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
-      </li>
-    </ul>
-    <div class="main-footer__copyright copyright">
-      <a class="copyright__link" href="#">
+  <footer class="main-footer page__container">
+    <div class="main-footer__wrapper">
+      <a class="main-footer__logo logo" href="#">
+        <img class="logo__image" src="./images/footer-logo.svg" width="202" height="59" alt="Logo">
+      </a>
+      <ul class="main-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Мы в Ютубе</span></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме</span></a>
+        </li>
+      </ul>
+      <a class="main-footer__copyright copyright" href="#">
         <span class="copyright__text">HTML Academy</span>
         <img class="copyright__image" src="images" width="50" height="50" alt="">
       </a>
