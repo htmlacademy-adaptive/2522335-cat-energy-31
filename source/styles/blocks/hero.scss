@@ -1,0 +1,52 @@
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable block-no-empty */
+
+.hero {
+  font-family: $header-font;
+  color: $accent-text-color;
+  background: linear-gradient(to top, #ffffff 50%, $bg-primary-color 50%, $bg-primary-color 100%);
+
+  @media screen and (min-width: $tablet-viewport) {
+    background: none;
+    color: $header-primary-text-color;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    background: linear-gradient(to right, #ffffff 50%, $bg-primary-color 50%, $bg-primary-color 100%);
+  }
+}
+
+.hero__image {
+
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+}
+
+.hero__content {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+.hero__link {
+
+}

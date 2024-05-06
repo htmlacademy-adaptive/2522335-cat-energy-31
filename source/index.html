@@ -14,12 +14,11 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="header">
     <div class="page__container">
-      <nav class="main-header__navigation navigation">
-
+      <nav class="header__navigation navigation">
         <div class="navigation__wrapper">
-          <a class="logo logo--image" href="#">
+          <a class="logo" href="#">
             <picture>
               <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
               <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
@@ -33,45 +32,40 @@
             <span class="visually-hidden">Переключение меню</span>
           </button>
         </div>
-
-        <ul class="navigation__list">
-          <li class="navigation__item navigation__item--current">
-            <a class="navigation__link" href="index.html">
+        <ul class="navigation__list navigation__list--accent-color">
+          <li class="navigation__item navigation__item--current ">
+            <a class="navigation__link link" href="index.html">
               главная
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">
+            <a class="navigation__link link" href="catalog.html">
               каталог продукции
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">
+            <a class="navigation__link link" href="#">
               подбор программы
             </a>
           </li>
         </ul>
-
       </nav>
     </div>
   </header>
 
   <main class="main-container">
     <section class="hero">
-
       <picture>
         <source width="552" height="499" media="(min-width: 1440px)" type="image/png" srcset="images/hero-desktop@1x.png 1x, images/hero-desktop@2x.png 2x">
         <source width="709" height="609" media="(min-width: 768px)" type="image/png" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x">
         <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Cat energy product">
       </picture>
-
       <h2 class="hero__title">Функциональное питание <br> для котов
       </h2>
       <p class="hero__content">Занялся собой? Займись котом!</p>
-      <a class="hero__link" href="#">
+      <a class="hero__link link button button--middle" href="#">
         Подобрать программу
       </a>
-
     </section>
 
     <section class="programs">
@@ -84,7 +78,7 @@
             </h3>
             <p class="program__content">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
               Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="program__link" href="#">каталог slim</a>
+            <a class="program__link link" href="#">каталог slim</a>
           </li>
           <li class="programs__item  program">
             <h3 class="program__header">
@@ -92,7 +86,7 @@
             </h3>
             <p class="program__content">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="program__link" href="#">каталог pro</a>
+            <a class="program__link link" href="#">каталог pro</a>
           </li>
         </ul>
       </div>
@@ -151,7 +145,6 @@
           </div>
         </div>
         <div class="experience__demo demo">
-
           <picture>
             <source width="560" height="512" media="(min-width: 768px)" type="image/png" srcset="images/fatcat-tablet@1x.png 1x, images/fatcat-tablet@2x.png 2x">
             <img class="demo__image demo__image--before" src="images/fatcat-mobile@1x.png" srcset="images/fatcat-mobile@2x.png 2x" width="280" height="256" alt="Питомец до">
@@ -160,25 +153,21 @@
             <source width="560" height="512" media="(min-width: 768px)" type="image/png" srcset="images/thincat-tablet@1x.png 1x, images/thincat-tablet@2x.png 2x">
             <img class="demo__image demo__image--after" src="images/thincat-mobile@1x.png" srcset="images/thincat-mobile@2x.png 2x" width="280" height="256" alt="Питомец после">
           </picture>
-
           <div class="demo__slider"></div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <footer class="main-footer">
+  <footer class="footer">
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-
       <!-- TODO: поменять на интерактивный вариант -->
       <picture>
         <source width="1440" height="400" media="(min-width: 1440px)" type="image/jpg" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
         <source width="768" height="400" media="(min-width: 768px)" type="image/jpg" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
         <img src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта">
       </picture>
-
       <div class="page__container">
         <div class="map__invitation invitation">
           <div class="invitation__title">приглашаем к сотрудничеству дилеров!</div>
@@ -193,9 +182,7 @@
       <div class="page__container">
         <h2 class="visually-hidden">Контакты</h2>
         <a class="contacts__logo logo" href="#">
-
           <img class="logo__image" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
-
         </a>
         <ul class="contacts__social social">
           <li class="social__item">
@@ -210,9 +197,7 @@
         </ul>
         <a class="contacts__copyright copyright" href="#">
           <span class="copyright__text">HTML Academy</span>
-
           <img class="copyright__image" src="images" width="50" height="50" alt="HTML Academy">
-
         </a>
       </div>
     </section>

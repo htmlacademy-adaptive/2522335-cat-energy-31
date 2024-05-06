@@ -1,0 +1,44 @@
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable block-no-empty */
+
+.program {
+  background-color: $bg-accent-color;
+}
+
+.program__header {
+  font-family: $header-font;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.program__content {
+  @include standard-content-font();
+}
+
+.program__link {
+  background-color: transparent;
+  color: $header-primary-text-color;
+  font-family: $header-font;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  font-size: 16px;
+  line-height: 16px;
+
+  &::after {
+    content: " -->";
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 20px;
+    line-height: auto;
+  }
+}

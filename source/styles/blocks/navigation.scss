@@ -1,0 +1,55 @@
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable block-no-empty */
+
+.navigation {
+  background-color: transparent;
+}
+
+.navigation__wrapper {
+
+}
+
+.navigation__menu-button {
+
+}
+
+.navigation__list {
+  color: $header-primary-text-color;
+}
+
+.navigation__list--accent-color {
+  @media screen and (min-width: $desktop-viewport) {
+    color: $accent-text-color;
+  }
+}
+
+.navigation__item {
+  font-family: $header-font;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &.navigation__item--current {
+    border-bottom: none;
+
+    @media screen and (min-width: $desktop-viewport) {
+      border-bottom: 2px solid $bg-primary-color;
+    }
+  }
+}
+
+.navigation__link {
+  color: inherit;
+}

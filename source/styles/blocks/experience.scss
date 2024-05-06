@@ -1,0 +1,54 @@
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable block-no-empty */
+
+.experience {
+  background-color: $bg-accent-dark-color;
+
+  @media screen and (min-width: $tablet-viewport) {
+    background: linear-gradient(to top, #ffffff 60%, $bg-accent-color 60%, $bg-accent-color 100%);
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    background-color: $bg-accent-color;
+  }
+}
+
+.experience__header {
+  background-color: transparent;
+
+  @media screen and (min-width: $tablet-viewport) {
+    background-color: $accent-text-color;
+  }
+}
+
+.experience__description {
+  background-color: transparent;
+
+  @media screen and (min-width: $tablet-viewport) {
+    background-color: $accent-text-color;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    background-color: transparent;
+  }
+}
+
+.experience__content {
+  @include standard-content-font();
+}
+
+.experience__list {
+
+}
+
+.experience__item {
+
+}
+
+.experience__footer {
+
+}
+
+.experience__demo {
+
+}

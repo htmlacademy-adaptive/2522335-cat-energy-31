@@ -1,0 +1,53 @@
+.button {
+  font-family: $header-font;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: $accent-text-color;
+  background-color: $bg-primary-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(256, 256, 256, 0.3);
+  }
+}
+
+.button--accent {
+  color: $primary-text-color;
+  background-color: $bg-accent-color;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: $primary-text-color;
+  }
+}
+
+.button--small {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button--middle {
+  font-size: 16px;
+  line-height: 20px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.button--large {
+  font-size: 20px;
+  line-height: 26px;
+}

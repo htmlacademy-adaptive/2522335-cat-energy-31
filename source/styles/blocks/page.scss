@@ -1,0 +1,16 @@
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable block-no-empty */
+
+.page {
+  font-family: $primary-font;
+  background-color: transparent;
+}
+
+.page__body {
+  font-family: inherit;
+  background-color: transparent;
+}
+
+.page__container {
+  box-sizing: border-box;
+}

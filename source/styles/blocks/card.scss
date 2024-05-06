@@ -1,3 +1,76 @@
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable block-no-empty */
+
+.card {
+  background-color: #ffffff;
+}
+
 .card__image {
   object-fit: none;
+}
+
+.card__content {
+  background-color: #ffffff;
+  border: 2px solid $bg-accent-color;
+
+  @media screen and (min-width: $tablet-viewport) {
+    background-color: $bg-accent-color;
+  }
+}
+
+.card__content--add {
+  background-color: #ffffff;
+}
+
+
+.card__title {
+  font-family: $header-font;
+  font-weight: 400;
+  color: $header-secondary-text-color;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.card__list {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $primary-font;
+  font-weight: 400;
+  color: $primary-text-color;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.card__item {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $primary-font;
+  font-weight: 400;
+  color: $primary-text-color;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.card__measure {
+
+}
+
+.card__value {
+
+}
+
+.card__button {
+
 }
