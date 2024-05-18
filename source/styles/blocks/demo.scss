@@ -1,8 +1,8 @@
 /* stylelint-disable rule-empty-line-before */
 /* stylelint-disable block-no-empty */
-
+$slider-color: #666666;
 .demo {
-
+  position: relative;
 }
 
 .demo__image {
@@ -15,5 +15,39 @@
 }
 
 .demo__slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 256px;
+  border: 2px solid $slider-color;
+  border-radius: 2px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 2px solid $slider-color;
+    border-radius: 50%;
+  }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 18px;
+    background-color: $slider-color;
+    mask-image: url("/icons/stack.svg#slider-button");
+    mask-size: 24px 18px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    object-fit: none;
+  }
 }

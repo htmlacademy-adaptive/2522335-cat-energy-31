@@ -1,8 +1,7 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .copyright {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__text {
@@ -14,5 +13,11 @@
 }
 
 .copyright__image {
-
+  width: 27px;
+  height: 34px;
+  background-color: #666666;
+  mask-image: url("/icons/stack.svg#htmlacademy");
+  mask-size: 27px 34px;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }

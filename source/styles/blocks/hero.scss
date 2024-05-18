@@ -2,9 +2,12 @@
 /* stylelint-disable block-no-empty */
 
 .hero {
+  position: relative;
   font-family: $header-font;
   color: $accent-text-color;
-  background: linear-gradient(to top, #ffffff 50%, $bg-primary-color 50%, $bg-primary-color 100%);
+  background-image: linear-gradient(to top, #ffffff 50%, $bg-primary-color 50%, $bg-primary-color 100%); //url("/images/hero-cat@2x.png"),
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 
   @media screen and (min-width: $tablet-viewport) {
     background: none;
@@ -17,7 +20,7 @@
 }
 
 .hero__image {
-
+  z-index: 5;
 }
 
 .hero__title {

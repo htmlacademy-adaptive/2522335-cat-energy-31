@@ -2,21 +2,42 @@
 /* stylelint-disable block-no-empty */
 
 .social {
-
+  display: flex;
+  justify-content: space-between;
+  width: 132px;
+  height: 22px;
 }
 
 .social__item {
-
 }
 
 .social__link {
-  &.social__link--vkontakte {
+  height: 100%;
+  &::before {
+    content: "";
+    width: 28px;
+    height: 22px;
+    display: block;
+    background-color: #666666;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    object-fit: contain;
+  }
 
+  &.social__link--vkontakte {
+    &::before {
+      mask-image: url("/icons/stack.svg#vkontakte");
+    }
   }
   &.social__link--youtube {
-
+    &::before {
+      mask-image: url("/icons/stack.svg#youtube");
+    }
   }
-  &.social__link--telegram {
 
+  &.social__link--telegram {
+    &::before {
+      mask-image: url("/icons/stack.svg#telegram");
+    }
   }
 }

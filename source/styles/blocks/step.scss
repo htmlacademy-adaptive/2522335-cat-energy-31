@@ -1,10 +1,55 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .step {
+  position: relative;
+  min-height: 60px;
 
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: $bg-primary-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    object-fit: none;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    &::before {
+      height: 80px;
+      width: 80px;
+      background-size: 35%;
+    }
+  }
 }
 
-.step-content {
+.step--first {
+  &::before {
+    background-image: url("/icons/stack.svg#leaf");
+  }
+}
 
+.step--second {
+  &::before {
+    background-image: url("/icons/stack.svg#water");
+  }
+}
+
+.step--third {
+  &::before {
+    background-image: url("/icons/stack.svg#eat");
+  }
+}
+
+.step--fourth {
+  &::before {
+    background-image: url("/icons/stack.svg#clock");
+  }
+}
+
+
+.step-content {
+  padding-left: 80px;
 }

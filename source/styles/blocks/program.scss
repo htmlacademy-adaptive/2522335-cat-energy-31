@@ -1,8 +1,112 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .program {
+  position: relative;
   background-color: $bg-accent-color;
+
+  &::before {
+    content: "";
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: $bg-primary-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
+    padding: 10px;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    height: 372px;
+    width: 100%;
+
+    &::before {
+      top: 50%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+    }
+
+    &::after {
+      top: 50%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      padding: 40px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    height: 374px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+    }
+  }
+}
+
+.program--slim {
+  &::after {
+    background-image: url("/icons/stack.svg#cat-sit");
+    background-size: 36px 50px;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    &::after {
+      background-size: 140px 194px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    &::after {
+      background-size: 70px 97px;
+    }
+  }
+}
+
+.program--pro {
+  &::after {
+    background-image: url("/icons/stack.svg#cat-walk");
+    background-size: 67px 28px;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    &::after {
+      background-size: 268px 112px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    &::after {
+      background-size: 134px 567px;
+    }
+  }
 }
 
 .program__header {
@@ -11,6 +115,7 @@
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+  padding: 20px 0 20px 70px;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 36px;
@@ -20,9 +125,18 @@
 
 .program__content {
   @include standard-content-font();
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: 340px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: 100%;
+  }
 }
 
 .program__link {
+  position: relative;
   background-color: transparent;
   color: $header-primary-text-color;
   font-family: $header-font;
@@ -34,7 +148,16 @@
   line-height: 16px;
 
   &::after {
-    content: " -->";
+    content: "";
+    right: -40px;
+    top: 9px;
+    position: absolute;
+    height: 12px;
+    width: 24px;
+    background-color: $header-primary-text-color;
+    mask-image: url("/icons/stack.svg#arrow");
+    mask-repeat: no-repeat;
+    mask-size: 24px 12px;
   }
 
   @media screen and (min-width: $tablet-viewport) {

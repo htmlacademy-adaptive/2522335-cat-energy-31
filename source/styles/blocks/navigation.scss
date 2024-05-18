@@ -1,17 +1,36 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .navigation {
   background-color: transparent;
 }
 
 .navigation__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 38px;
 
+  @media screen and (min-width: $tablet-viewport) {
+    height: 50px;
+  }
 }
 
 .navigation__menu-button {
+  height: 18px;
+  width: 18px;
+  background-image: url("/icons/stack.svg#burger-menu");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: transparent;
+  padding: 0;
 
+  @media screen and (min-width: $tablet-viewport) {
+    display: none;
+  }
 }
+
+.navigation__menu-button--open {
+  background-image: url("/icons/stack.svg#close");
+}
+
 
 .navigation__list {
   color: $header-primary-text-color;

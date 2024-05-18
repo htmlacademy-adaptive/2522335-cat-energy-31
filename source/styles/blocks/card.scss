@@ -12,14 +12,26 @@
 .card__content {
   background-color: #ffffff;
   border: 2px solid $bg-accent-color;
+  text-align: center;
 
   @media screen and (min-width: $tablet-viewport) {
     background-color: $bg-accent-color;
   }
 }
 
-.card__content--add {
-  background-color: #ffffff;
+.card--add {
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("/icons/stack.svg#plus") center/100% no-repeat;
+
+    @media screen and (min-width: $tablet-viewport) {
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 
 

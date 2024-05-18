@@ -18,11 +18,13 @@
     <div class="page__container">
       <nav class="header__navigation navigation">
         <div class="navigation__wrapper">
-          <a class="logo" href="#">
+          <a class="logo" href="index.html">
             <picture>
               <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
               <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
             </picture>
+          </a>
+          <a class="logo" href="#">
             <picture>
               <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
               <img class="logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy">
@@ -226,9 +228,8 @@
             </div>
             <button class="card__button button button--small" type="button">заказать</button>
           </li>
-          <li class="catalog__item card ">
-            <img class="card__image" src="images" width="68" height="86" alt="Показать еще">
-            <div class="card__content card__content--add">
+          <li class="catalog__item card card--add">
+            <div class="card__content ">
               <h4 class="card__title">показать еще<br> 100500 товаров</h4>
               <div class="card__item">
                 На самом деле вкусов гораздо больше!
@@ -321,7 +322,7 @@
     <section class="contacts">
       <div class="page__container">
         <h2 class="visually-hidden">Контакты</h2>
-        <a class="contacts__logo logo" href="#">
+        <a class="contacts__logo logo" href="index.html">
           <img class="logo__image" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
         </a>
         <ul class="contacts__social social">
@@ -335,9 +336,9 @@
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме</span></a>
           </li>
         </ul>
-        <a class="contacts__copyright copyright" href="#">
+        <a class="contacts__copyright copyright" href="#nav">
           <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__image" src="images" width="50" height="50" alt="HTML Academy">
+          <div class="copyright__image"></div>
         </a>
       </div>
     </section>
