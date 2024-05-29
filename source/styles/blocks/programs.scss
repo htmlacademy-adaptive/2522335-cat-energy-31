@@ -1,14 +1,18 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .programs {
+  padding: 20px 0;
 
+  @media screen and (min-width: $desktop-viewport) {
+    padding: 0;
+  }
 }
 
 .programs__list {
+  display: grid;
+  grid-gap: 20px;
 
-}
-
-.programs__item {
-
+  @media screen and (min-width: $desktop-viewport) {
+    padding: 80px 0;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
 }

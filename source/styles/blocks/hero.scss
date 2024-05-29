@@ -1,8 +1,4 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .hero {
-  position: relative;
   font-family: $header-font;
   color: $accent-text-color;
   background-image: linear-gradient(to top, #ffffff 50%, $bg-primary-color 50%, $bg-primary-color 100%); //url("/images/hero-cat@2x.png"),
@@ -15,12 +11,47 @@
   }
 
   @media screen and (min-width: $desktop-viewport) {
+    padding-top: 65px;
     background: linear-gradient(to right, #ffffff 50%, $bg-primary-color 50%, $bg-primary-color 100%);
   }
 }
 
+.hero__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media screen and (min-width: $tablet-viewport) {
+    align-items: flex-start;
+    padding: 0 80px;
+    min-height: 860px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    min-height: 694px;
+  }
+}
+
 .hero__image {
+  display: block;
   z-index: 5;
+
+  @media screen and (min-width: $tablet-viewport) {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
 }
 
 .hero__title {
@@ -28,11 +59,14 @@
   line-height: 36px;
   font-weight: 400;
   text-align: center;
+  color: $accent-text-color;
+  padding: 30px 0 20px;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 60px;
     line-height: 60px;
     text-align: left;
+    color: $header-primary-text-color;
   }
 }
 
@@ -42,6 +76,7 @@
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  padding: 0 0 20px;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 20px;
@@ -51,5 +86,9 @@
 }
 
 .hero__link {
+  width: 100%;
 
+  @media screen and (min-width: $tablet-viewport) {
+    width: auto;
+  }
 }

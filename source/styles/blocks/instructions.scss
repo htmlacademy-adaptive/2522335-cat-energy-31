@@ -1,16 +1,26 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .instructions {
-
+  padding-bottom: 50px;
 }
 
 .instructions__header {
-
+  padding: 0 0 40px;
 }
 
 .instructions__list {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 20px;
 
+  @media screen and (min-width: $tablet-viewport) {
+    grid-gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    counter-reset: element;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+  }
 }
 
 .instructions__item {

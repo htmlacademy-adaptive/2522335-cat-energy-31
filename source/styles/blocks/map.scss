@@ -1,10 +1,56 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .map {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
 
+.map--accent {
+  background-color: $bg-accent-color;
+}
+
+.map__content {
+  position: relative;
+  max-width: $desktop-viewport;
+  margin: 0 auto;
 }
 
 .map__invitation {
+  margin: 20px 0;
 
+  @media screen and (min-width: $tablet-viewport) {
+    margin: 60px auto;
+    width: 628px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    position: absolute;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    padding: 60px;
+    transform: translateY(40px);
+    z-index: 2;
+  }
+}
+
+.map__wrapper {
+  width: 100%;
+  background-color: $bg-accent-color;
+  position: relative;
+}
+
+.map__image {
+  display: block;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: $tablet-viewport;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: $desktop-viewport;
+  }
 }

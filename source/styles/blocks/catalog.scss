@@ -1,14 +1,54 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
+.catalog {
+  border-top: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-viewport) {
+    @include page-container();
+    border: none;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding-top: 65px;
+  }
+}
 
 .catalog__title {
+  padding: 20px 0 40px;
 
+  @media (min-width: $mobile-viewport) and (max-width: ($tablet-viewport - 1)) {
+    @include page-container();
+  }
 }
 
 .catalog__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  grid-gap: 0;
 
+  @media (min-width: $tablet-viewport) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 60px;
+  }
 }
 
 .catalog__item {
+  border-top: 1px solid $bg-accent-color;
 
+  &:last-child {
+    border-bottom: 1px solid $bg-accent-color;
+  }
+
+  @media (min-width: $tablet-viewport) {
+    border: none;
+    width: 324px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: 245px;
+  }
 }

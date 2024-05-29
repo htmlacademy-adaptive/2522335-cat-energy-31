@@ -1,28 +1,46 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .experience {
   background-color: $bg-accent-dark-color;
+  padding: 20px 0 17px;
 
   @media screen and (min-width: $tablet-viewport) {
-    background: linear-gradient(to top, #ffffff 60%, $bg-accent-color 60%, $bg-accent-color 100%);
+    background: linear-gradient(to bottom, #ffffff 60%, $bg-accent-color 60%, $bg-accent-color 100%);
   }
 
   @media screen and (min-width: $desktop-viewport) {
-    background-color: $bg-accent-color;
+    padding: 0;
+    background: $bg-accent-color, linear-gradient(to bottom, #ffffff 25%, $bg-accent-color 25%, $bg-accent-color 100%);
+  }
+}
+
+.experience__wrapper {
+  @media screen and (min-width: $desktop-viewport) {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "title demo" "content demo";
+    grid-template-columns: 1fr  1fr;
   }
 }
 
 .experience__header {
   background-color: transparent;
+  padding-bottom: 40px;
 
   @media screen and (min-width: $tablet-viewport) {
     background-color: $accent-text-color;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    grid-area: title;
+    padding-bottom: 0;
+    background-color: transparent;
   }
 }
 
 .experience__description {
   background-color: transparent;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 20px;
 
   @media screen and (min-width: $tablet-viewport) {
     background-color: $accent-text-color;
@@ -30,25 +48,65 @@
 
   @media screen and (min-width: $desktop-viewport) {
     background-color: transparent;
+    grid-area: content;
+    width: 436px;
   }
 }
 
 .experience__content {
   @include standard-content-font();
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding-top: 60px;
+  }
+}
+
+.experience__statistic {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .experience__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
+  @media screen and (min-width: $tablet-viewport) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: 100%;
+  }
 }
 
 .experience__item {
-
+  width: 124px;
 }
 
 .experience__footer {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
 
+  @media screen and (min-width: $tablet-viewport) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: 100%;
+    padding-bottom: 60px;
+  }
 }
 
 .experience__demo {
+  margin: 40px 0;
 
+  @media screen and (min-width: $tablet-viewport) {
+    margin: 40px auto;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    grid-area: demo;
+  }
 }

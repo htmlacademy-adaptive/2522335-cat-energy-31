@@ -1,12 +1,11 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .subcription {
-
+  padding: 40px 0;
 }
 
 .subcription__title {
-
+  @media screen and (min-width: $tablet-viewport) {
+    padding: 60px 40px;
+  }
 }
 
 .subcription__description {
@@ -15,15 +14,35 @@
   color: $header-primary-text-color;
   font-size: 16px;
   line-height: 24px;
+  padding: 32px 0;
+  text-align: center;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 24px;
     line-height: 32px;
+    padding: 0 40px;
   }
 }
 
 .subcription__form {
+  width: 100%;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-auto-flow: row;
 
+  @media screen and (min-width: $tablet-viewport) {
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 40px;
+  }
+}
+
+.subcription__label {
+  @media screen and (min-width: $tablet-viewport) {
+    width: 100%;
+  }
 }
 
 .subcription__control {
@@ -33,8 +52,19 @@
   font-size: 20px;
   text-transform: uppercase;
   border: 1px solid #cdcdcd;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $tablet-viewport) {
+    height: 56px;
+  }
 }
 
 .subcription__button {
+  width: 100%;
 
+  @media screen and (min-width: $tablet-viewport) {
+    width: 256px;
+  }
 }

@@ -1,9 +1,9 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .page {
   font-family: $primary-font;
   background-color: transparent;
+  width: 100%;
+  max-width: $desktop-viewport;
+  margin: 0 auto;
 }
 
 .page__body {
@@ -12,5 +12,9 @@
 }
 
 .page__container {
-  box-sizing: border-box;
+  @include page-container();
+}
+
+.page__container--tablet-activate {
+  width: 100%;
 }

@@ -1,9 +1,19 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
 .header {
+  position: relative;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+
+  @media screen and (min-width: $desktop-viewport) {
+    position: absolute;
+  }
 }
 
 .header__navigation {
-
+  @media screen and (min-width: $tablet-viewport) {
+    padding-top: 20px;
+  }
 }

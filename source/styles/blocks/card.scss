@@ -1,39 +1,57 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .card {
   background-color: #ffffff;
-}
+  padding: 20px 0;
+  display: grid;
+  grid-template-areas: "image content" "button button";
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+  box-sizing: border-box;
 
-.card__image {
-  object-fit: none;
-}
-
-.card__content {
-  background-color: #ffffff;
-  border: 2px solid $bg-accent-color;
-  text-align: center;
+  @media (min-width: $mobile-viewport) and (max-width: ($tablet-viewport - 1)) {
+    @include page-container();
+  }
 
   @media screen and (min-width: $tablet-viewport) {
-    background-color: $bg-accent-color;
+    height: 511px;
+    background: linear-gradient(to bottom, transparent 30%, $bg-accent-color 30%, $bg-accent-color 100%);
+    border: none;
+    grid-template-areas: "image" "content" "button";
+    grid-template-columns: 1fr;
+    grid-row-gap: 0;
+    padding: 20px 40px;
   }
 }
 
 .card--add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 210px;
+
   &::before {
     content: "";
     display: block;
     width: 30px;
     height: 30px;
     background: url("/icons/stack.svg#plus") center/100% no-repeat;
+  }
 
-    @media screen and (min-width: $tablet-viewport) {
+  @media screen and (min-width: $tablet-viewport) {
+    justify-content: space-between;
+
+    &::before {
+      border: 2px solid $bg-accent-color;
       width: 60px;
       height: 60px;
     }
   }
 }
 
+.card__image {
+  grid-area: image;
+  object-fit: none;
+  display: block;
+}
 
 .card__title {
   font-family: $header-font;
@@ -42,10 +60,26 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
+  padding-bottom: 10px;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+.card__content {
+  background-color: #ffffff;
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media screen and (min-width: $tablet-viewport) {
+    background-color: $bg-accent-color;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
@@ -55,6 +89,7 @@
   font-family: $primary-font;
   font-weight: 400;
   color: $primary-text-color;
+  width: 100%;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 16px;
@@ -68,6 +103,9 @@
   font-family: $primary-font;
   font-weight: 400;
   color: $primary-text-color;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 16px;
@@ -75,14 +113,7 @@
   }
 }
 
-.card__measure {
-
-}
-
-.card__value {
-
-}
-
 .card__button {
-
+  grid-area: button;
+  width: 100%;
 }

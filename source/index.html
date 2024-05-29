@@ -55,26 +55,28 @@
     </div>
   </header>
 
-  <main class="main-container">
+  <main>
     <section class="hero">
-      <picture>
-        <source width="552" height="499" media="(min-width: 1440px)" type="image/png" srcset="images/hero-desktop@1x.png 1x, images/hero-desktop@2x.png 2x">
-        <source width="709" height="609" media="(min-width: 768px)" type="image/png" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x">
-        <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Cat energy product">
-      </picture>
-      <h2 class="hero__title">Функциональное питание <br> для котов
-      </h2>
-      <p class="hero__content">Занялся собой? Займись котом!</p>
-      <a class="hero__link link button button--middle" href="#">
-        Подобрать программу
-      </a>
+      <div class="hero__wrapper page__container">
+        <h2 class="hero__title">Функциональное <br>питание для котов
+        </h2>
+        <p class="hero__content">Занялся собой? Займись котом!</p>
+        <picture>
+          <source width="552" height="499" media="(min-width: 1440px)" type="image/png" srcset="images/hero-desktop@1x.png 1x, images/hero-desktop@2x.png 2x">
+          <source width="709" height="609" media="(min-width: 768px)" type="image/png" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x">
+          <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Cat energy product">
+        </picture>
+        <a class="hero__link link button button--middle" href="#">
+          Подобрать программу
+        </a>
+      </div>
     </section>
 
     <section class="programs">
       <div class="page__container">
         <h2 class="visually-hidden">Выбор программы</h2>
         <ul class="programs__list">
-          <li class="programs__item program program--slim">
+          <li class="program program--slim">
             <h3 class="program__header">
               похудение
             </h3>
@@ -82,7 +84,7 @@
               Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="program__link link" href="#">каталог slim</a>
           </li>
-          <li class="programs__item  program program--pro">
+          <li class="program program--pro">
             <h3 class="program__header">
               набор массы
             </h3>
@@ -105,7 +107,7 @@
           </li>
           <li class="instructions__item step step--second">
             <p class="step-content">
-              Выпускается в виде порошка,который нужно лишь залить кипятком и готово.
+              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
             </p>
           </li>
           <li class="instructions__item step step--third">
@@ -124,79 +126,91 @@
 
     <section class="experience">
       <div class="page__container">
-        <h2 class="experience__header">Живой пример</h2>
-        <div class="experience__description">
-          <p class="experience__content">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок!
-            При этом он не менял свлих привычек и по-прежнему спит по 16 часов в денью
-          </p>
-          <ul class="experience__list">
-            <li class="experience__item statistic-card">
-              <p class="statistic-card__content">5 кг</p>
-              <p class="statistic-card__caption">снижение веса</p>
-            </li>
-            <li class="experience__item statistic-card">
-              <p class="statistic-card__content">60 дней</p>
-              <p class="statistic-card__caption">затрачено времени</p>
-            </li>
-          </ul>
-          <div class="experience__footer costs">
-            <span class="costs__title">затраты на питание:</span>
-            <span class="costs__content">15 000 руб.</span>
+        <div class="experience__wrapper">
+          <h2 class="experience__header">Живой пример</h2>
+          <div class="experience__description">
+            <p class="experience__content">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+              Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
+            <div class="experience__statistic">
+              <ul class="experience__list">
+                <li class="experience__item statistic-card">
+                  <p class="statistic-card__content">5 кг</p>
+                  <p class="statistic-card__caption">снижение веса</p>
+                </li>
+                <li class="experience__item statistic-card">
+                  <p class="statistic-card__content">60 дней</p>
+                  <p class="statistic-card__caption">затрачено времени</p>
+                </li>
+              </ul>
+              <div class="experience__footer costs">
+                <span class="costs__title">затраты на питание:</span>
+                <span class="costs__content">15 000 руб.</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="experience__demo demo">
-          <picture>
-            <source width="560" height="512" media="(min-width: 768px)" type="image/png" srcset="images/fatcat-tablet@1x.png 1x, images/fatcat-tablet@2x.png 2x">
-            <img class="demo__image demo__image--before" src="images/fatcat-mobile@1x.png" srcset="images/fatcat-mobile@2x.png 2x" width="280" height="256" alt="Питомец до">
-          </picture>
-          <picture>
-            <source width="560" height="512" media="(min-width: 768px)" type="image/png" srcset="images/thincat-tablet@1x.png 1x, images/thincat-tablet@2x.png 2x">
-            <img class="demo__image demo__image--after" src="images/thincat-mobile@1x.png" srcset="images/thincat-mobile@2x.png 2x" width="280" height="256" alt="Питомец после">
-          </picture>
-          <div class="demo__slider"></div>
+          <div class="experience__demo demo">
+            <div class="demo__image-container">
+              <picture>
+                <source width="560" height="512" media="(min-width: 768px)" type="image/png" srcset="images/fatcat-tablet@1x.png 1x, images/fatcat-tablet@2x.png 2x">
+                <img class="demo__image demo__image--before" src="images/fatcat-mobile@1x.png" srcset="images/fatcat-mobile@2x.png 2x" width="280" height="256" alt="Питомец до">
+              </picture>
+            </div>
+            <div class="demo__image-container">
+              <picture>
+                <source width="560" height="512" media="(min-width: 768px)" type="image/png" srcset="images/thincat-tablet@1x.png 1x, images/thincat-tablet@2x.png 2x">
+                <img class="demo__image demo__image--after" src="images/thincat-mobile@1x.png" srcset="images/thincat-mobile@2x.png 2x" width="280" height="256" alt="Питомец после">
+              </picture>
+            </div>
+            <div class="demo__slider"></div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <!-- TODO: поменять на интерактивный вариант -->
-      <picture>
-        <source width="1440" height="400" media="(min-width: 1440px)" type="image/jpg" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
-        <source width="768" height="400" media="(min-width: 768px)" type="image/jpg" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
-        <img src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта">
-      </picture>
-      <div class="page__container">
+      <div class="map__content page__container">
         <div class="map__invitation invitation">
-          <div class="invitation__title">приглашаем к сотрудничеству дилеров!</div>
-          <div class="invitation__address address">
-            <p class="address__street">ул. Б. Конюшенная, д. 19/8</p>
-            <p class="address__city">Санкт-Петербург</p>
+          <div class="invitation__title">приглашаем <br>к сотрудничеству<br>дилеров!</div>
+          <div class="invitation__address">
+            <span>ул. Большая <br> Конюшенная, д. 19/8</span>
+            <span>Санкт-Петербург</span>
           </div>
         </div>
       </div>
+      <div class="map__wrapper">
+        <picture>
+          <source width="1440" height="400" media="(min-width: 1440px)" type="image/jpg" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
+          <source width="768" height="400" media="(min-width: 768px)" type="image/jpg" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
+          <img class="map__image" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта">
+        </picture>
+      </div>
     </section>
     <section class="contacts">
-      <div class="page__container">
+      <div class="contacts__wrapper page__container">
         <h2 class="visually-hidden">Контакты</h2>
         <a class="contacts__logo logo" href="index.html">
           <img class="logo__image" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
         </a>
-        <ul class="contacts__social social">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Мы в Ютубе</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме</span></a>
-          </li>
-        </ul>
+        <div class="contacts__social">
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Мы в Ютубе</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме</span></a>
+            </li>
+          </ul>
+        </div>
+
         <a class="contacts__copyright copyright" href="#nav">
           <span class="copyright__text">HTML Academy</span>
           <div class="copyright__image"></div>
@@ -207,8 +221,11 @@
   <script>
     // для временной демонстрации работы кнопки меню
     let menu = document.querySelector(".navigation__menu-button");
-    menu.addEventListener("click", () =>
-      menu.classList.toggle("navigation__menu-button--open")
+    let navigation = document.querySelector(".navigation__list");
+    menu.addEventListener("click", () => {
+      menu.classList.toggle("navigation__menu-button--open");
+      navigation.classList.toggle("navigation__list--open");
+    }
     );
   </script>
 </body>

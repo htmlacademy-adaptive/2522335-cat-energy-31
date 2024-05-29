@@ -2,7 +2,16 @@
 /* stylelint-disable block-no-empty */
 
 .product {
+  padding: 20px 0;
+  display: grid;
+  grid-row-gap: 15px;
 
+  @media screen and (min-width: $tablet-viewport) {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .product__title {
@@ -25,21 +34,32 @@
   font-family: $primary-font;
   font-weight: 400;
   color: $primary-text-color;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 16px;
     line-height: 20px;
+    width: 50%;
+    justify-content: flex-end;
   }
 }
 
-.product__volume {
-
+.product__volume{
 }
 
 .product__price {
-
+  @media screen and (min-width: $tablet-viewport) {
+    padding-left: 40px;
+  }
 }
 
 .product__button {
+  width: 100%;
 
+  @media screen and (min-width: $tablet-viewport) {
+    margin-top: 10px;
+  }
 }

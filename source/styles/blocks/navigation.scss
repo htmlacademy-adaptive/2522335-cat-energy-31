@@ -1,5 +1,12 @@
 .navigation {
   background-color: transparent;
+
+  @media screen and (min-width: $tablet-viewport) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+  }
 }
 
 .navigation__wrapper {
@@ -33,10 +40,42 @@
 
 
 .navigation__list {
+  @include flex-column-center();
+  display: none;
   color: $header-primary-text-color;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: #ffffff;
+
+  @media screen and (min-width: $tablet-viewport) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    width: 436px;
+    top: 0;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    background-color: transparent;
+  }
+}
+
+.navigation__list--open {
+  display: flex;
 }
 
 .navigation__list--accent-color {
+  .navigation__item--current.navigation__item--current {
+    @media screen and (min-width: $desktop-viewport) {
+      color: $accent-text-color;
+      border-bottom: 1px solid $accent-text-color;
+    }
+  }
+
   @media screen and (min-width: $desktop-viewport) {
     color: $accent-text-color;
   }
@@ -47,12 +86,21 @@
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
-  text-align: center;
   text-transform: uppercase;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-top: 1px solid #e6e6e6;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 18px;
     line-height: 24px;
+    width: fit-content;
+    border-top: none;
   }
 
   @media screen and (min-width: $desktop-viewport) {
@@ -62,6 +110,18 @@
 
   &.navigation__item--current {
     border-bottom: none;
+    position: relative;
+
+    @media screen and (min-width: $tablet-viewport) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid $bg-primary-color;
+      }
+    }
 
     @media screen and (min-width: $desktop-viewport) {
       border-bottom: 2px solid $bg-primary-color;

@@ -17,11 +17,31 @@
   }
 
   @media screen and (min-width: $tablet-viewport) {
+    min-height: 280px;
+
     &::before {
       height: 80px;
       width: 80px;
       background-size: 35%;
     }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      counter-increment: element;
+      content: counter(element);
+      font-size: 280px;
+      line-height: 200px;
+      opacity: 0.1;
+      font-family: $header-font;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: 246px;
   }
 }
 
@@ -52,4 +72,8 @@
 
 .step-content {
   padding-left: 80px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    padding: 100px 0 0;
+  }
 }

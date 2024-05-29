@@ -1,8 +1,11 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .invitation {
-  background-color: #ffffff;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (min-width: $desktop-viewport) {
+    background-color: #ffffff;
+  }
 }
 
 .invitation__title {
@@ -19,5 +22,20 @@
 }
 
 .invitation__address {
+  @include standard-content-font();
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 16px;
+    line-height: 20px;
+    align-items: flex-end;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    align-items: flex-start;
+  }
 }

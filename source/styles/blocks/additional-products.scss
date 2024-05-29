@@ -6,15 +6,28 @@
 }
 
 .additional-products__title {
+  padding: 20px 0;
 
+  @media screen and (min-width: $tablet-viewport) {
+    padding: 80px 0;
+  }
 }
 
 .additional-products__list {
-
+  display: grid;
+  grid-auto-rows: row;
 }
 
 .additional-products__item {
+  border-top: 1px solid $bg-accent-color;
 
+  &:last-child {
+    border-bottom: 1px solid $bg-accent-color;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    border-color: #cdcdcd;
+  }
 }
 
 .additional-products__promo {

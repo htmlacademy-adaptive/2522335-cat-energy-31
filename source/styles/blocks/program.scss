@@ -1,14 +1,18 @@
 .program {
   position: relative;
   background-color: $bg-accent-color;
+  min-height: 266px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 
   &::before {
     content: "";
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     position: absolute;
     width: 50px;
-    height: 50px;
+    min-height: 50px;
     background-color: $bg-primary-color;
     border-radius: 50%;
   }
@@ -24,12 +28,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
-    padding: 10px;
+    padding: 20px;
   }
 
   @media screen and (min-width: $tablet-viewport) {
-    height: 372px;
+    min-height: 372px;
     width: 100%;
+    padding: 60px 50px;
 
     &::before {
       top: 50%;
@@ -50,7 +55,7 @@
   }
 
   @media screen and (min-width: $desktop-viewport) {
-    height: 374px;
+    min-height: 374px;
 
     &::before {
       top: 0;
@@ -58,6 +63,7 @@
       transform: translate(0, 0);
       width: 100px;
       height: 100px;
+      margin: 20px;
     }
 
     &::after {
@@ -115,19 +121,26 @@
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 20px 0 20px 70px;
+  padding: 5px 0 20px 90px;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 36px;
     line-height: 36px;
+    padding: 0 0 40px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding: 15px 0 60px 150px;
   }
 }
 
 .program__content {
   @include standard-content-font();
+  padding-bottom: 20px;
 
   @media screen and (min-width: $tablet-viewport) {
     width: 340px;
+    padding-bottom: 40px;
   }
 
   @media screen and (min-width: $desktop-viewport) {
@@ -146,6 +159,7 @@
   border-radius: $border-radius;
   font-size: 16px;
   line-height: 16px;
+
 
   &::after {
     content: "";
