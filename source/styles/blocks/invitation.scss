@@ -1,0 +1,45 @@
+.invitation {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (min-width: $desktop-viewport) {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.invitation__title {
+  font-family: $header-font;
+  color: $map-text-color;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.invitation__address {
+  @include standard-content-font();
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 16px;
+    line-height: 20px;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

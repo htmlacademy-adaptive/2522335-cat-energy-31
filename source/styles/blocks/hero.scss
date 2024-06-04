@@ -1,0 +1,130 @@
+$underlay: #414141;
+$dark-underlay: #555555;
+
+.hero {
+  $color: rgba($bg-primary-color, 0.85);
+
+  font-family: $header-font;
+  color: $accent-text-color;
+  min-height: 480px;
+  background:
+    linear-gradient(to top, #ffffff 0%, #ffffff 37%, $color 37%, $color 100%),
+    url("/images/hero-cat-mobile@1x.jpg") top center no-repeat,
+    linear-gradient(to right, $dark-underlay 0%, $underlay 100%);
+
+
+  @media screen and (min-resolution: 2dppx) {
+    background:
+      linear-gradient(to top, #ffffff 37%, $color 37%, $color 100%),
+      url("/images/hero-cat-mobile@2x.jpg") top center/contain no-repeat,
+      linear-gradient(to right, $dark-underlay 0%, $underlay 100%);
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    background: none;
+    color: $header-primary-text-color;
+    min-height: 855px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    min-height: 630px;
+    padding-top: 64px;
+    background:
+      linear-gradient(to right, #ffffff 50%, $color 50%, $color 100%),
+      url("/images/hero-cat-desktop@1x.jpg") bottom right -85%/contain no-repeat,
+      linear-gradient(to right, #ffffff 50%, $underlay 50%, $underlay 100%);
+  }
+
+  @media screen and (min-width: $desktop-viewport) and (min-resolution: 2dppx) {
+    background:
+      linear-gradient(to right, #ffffff 50%, $color 50%, $color 100%),
+      url("/images/hero-cat-desktop@2x.jpg") bottom right -85%/contain no-repeat,
+      linear-gradient(to right, #ffffff 50%, $underlay 50%, $underlay 100%);
+  }
+}
+
+.hero__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media screen and (min-width: $tablet-viewport) {
+    align-items: flex-start;
+    padding: 65px 90px 0;
+    min-height: 855px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    min-height: 630px;
+    padding: 160px 80px 0;
+  }
+}
+
+.hero__image {
+  display: block;
+  z-index: 5;
+
+  @media screen and (min-width: $tablet-viewport) {
+    position: absolute;
+    top: 265px;
+    left: 0;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    position: absolute;
+    top: 52%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
+  color: $accent-text-color;
+  padding: 28px 0 25px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: $header-primary-text-color;
+    padding: 0;
+    padding-bottom: 40px;
+  }
+}
+
+.hero__content {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 0 29px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    padding-bottom: 45px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding-bottom: 52px;
+  }
+}
+
+.hero__link {
+  width: 100%;
+  margin-top: 3px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: auto;
+  }
+}

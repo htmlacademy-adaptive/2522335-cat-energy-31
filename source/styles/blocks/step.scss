@@ -1,0 +1,100 @@
+.step {
+  position: relative;
+  min-height: 60px;
+
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: $bg-primary-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    object-fit: none;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    min-height: 280px;
+
+    &::before {
+      height: 80px;
+      width: 80px;
+      background-size: 35%;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      counter-increment: element;
+      content: counter(element);
+      font-size: 280px;
+      line-height: 200px;
+      opacity: 0.1;
+      font-family: $header-font;
+      text-align: center;
+      transform: translateX(20px);
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: 250px;
+
+    &::after {
+      transform: translateX(60px);
+    }
+  }
+}
+
+.step--first {
+  &::before {
+    background-image: url("/icons/stack.svg#leaf");
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    &::after {
+      transform: translateX(10px);
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    &::after {
+      transform: translateX(50px);
+    }
+  }
+}
+
+.step--second {
+  &::before {
+    background-image: url("/icons/stack.svg#water");
+  }
+}
+
+.step--third {
+  &::before {
+    background-image: url("/icons/stack.svg#eat");
+  }
+}
+
+.step--fourth {
+  &::before {
+    background-image: url("/icons/stack.svg#clock");
+  }
+}
+
+
+.step-content {
+  padding-left: 80px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    padding: 110px 80px 0 0;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding-right: 5px;
+  }
+}

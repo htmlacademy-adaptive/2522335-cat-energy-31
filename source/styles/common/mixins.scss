@@ -1,0 +1,70 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-src...) {
+  @font-face {
+    font-family: $font-family;
+    src: $font-src;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+  }
+}
+
+@mixin standard-content-font() {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $primary-font;
+  font-weight: 400;
+  color: $primary-text-color;
+  font-display: swap;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin flex-column-center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin page-container() {
+  box-sizing: border-box;
+  width: 280px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: 708px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: 1220px;
+  }
+}
+
+@mixin title-with-line($top) {
+  background-color: #ffffff;
+  z-index: 1;
+  width: fit-content;
+
+  &::before {
+    content: "";
+    top: $top;
+    left: 50%;
+    right: 0;
+    position: absolute;
+    border: 1px solid $bg-primary-color;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    &::before {
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    margin-left: -40px;
+  }
+}

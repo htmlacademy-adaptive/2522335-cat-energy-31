@@ -1,0 +1,78 @@
+.map {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 0;
+  background-color: #ffffff;
+  overflow: hidden hidden;
+  position: relative;
+}
+
+.map--accent {
+  background-color: $bg-accent-color;
+}
+
+.map__content {
+  position: relative;
+  max-width: $desktop-viewport;
+  margin: 0 auto;
+}
+
+.map__invitation {
+  margin: 27px 0;
+
+  @media screen and (min-width: $tablet-viewport) {
+    margin: 60px auto;
+    width: 628px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 405px;
+    padding: 60px 80px;
+    background-color: #ffffff;
+    transform: translateY(35px);
+    z-index: 2;
+  }
+}
+
+.map__wrapper {
+  width: 100%;
+  background-color: $bg-accent-color;
+  position: relative;
+}
+
+.map__image {
+  display: block;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: $tablet-viewport;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: $desktop-viewport;
+  }
+}
+
+.map__interactive-map {
+  position: absolute;
+  inset: 0;
+  width: $mobile-viewport;
+  height: 362px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: $tablet-viewport;
+    height: 400px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: $desktop-viewport;
+  }
+}
+
+.map__interactive-map--no-js {
+  display: none;
+}

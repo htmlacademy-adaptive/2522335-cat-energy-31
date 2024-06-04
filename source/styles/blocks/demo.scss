@@ -1,0 +1,119 @@
+$slider-color: #666666;
+$demo-height: 256px;
+$demo-height-middle: 512px;
+$demo-width-middle: 560px;
+
+
+.demo {
+  position: relative;
+  height: $demo-height;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (min-width: $tablet-viewport) {
+    height: $demo-height-middle;
+    width: $demo-width-middle;
+  }
+}
+
+.demo__image {
+  width: 100%;
+  height: $demo-height;
+  object-fit: none;
+
+  &.demo__image--before {
+    object-position: 0%;
+  }
+
+  &.demo__image--after {
+    object-position: 100%;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    height: $demo-height-middle;
+    width: calc($demo-width-middle/2);
+  }
+}
+
+.demo__image-container {
+  width: 100%;
+  height: $demo-height;
+
+  @media screen and (min-width: $tablet-viewport) {
+    height: $demo-height-middle;
+    width: calc($demo-width-middle/2);
+  }
+}
+
+.demo__slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: $demo-height;
+  border: 2px solid $slider-color;
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 2px solid $slider-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 18px;
+    background-color: $slider-color;
+    mask-image: url("/icons/stack.svg#slider-button");
+    mask-size: 24px 18px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    object-fit: none;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $bg-primary-color;
+
+    &::before {
+      border: 2px solid $bg-primary-color;
+    }
+
+    &::after {
+      background-color: $bg-primary-color;
+    }
+  }
+
+  &:active {
+    border: 2px solid $slider-color;
+    opacity: 0.3;
+
+    &::before {
+      border: 2px solid $bg-primary-color;
+      opacity: 0.3;
+    }
+
+    &::after {
+      background-color: $bg-primary-color;
+      opacity: 0.3;
+    }
+  }
+
+
+  @media screen and (min-width: $tablet-viewport) {
+    height: $demo-height-middle;
+  }
+}

@@ -1,1 +1,19 @@
 /* здесь используйте глобальные переменные */
+// FONTS
+$primary-font:  "Lato", "Arial", sans-serif;
+$header-font: "Oswald", "Arial", sans-serif;
+// COLORS
+$bg-primary-color: #68b738;
+$bg-accent-color: #f2f2f2;
+$bg-accent-dark-color: #eaeaea;
+$primary-text-color: #444444;
+$accent-text-color: #ffffff;
+$map-text-color: #111111;
+$header-primary-text-color: #000000;
+$header-secondary-text-color: #222222;
+// VIEWPORTS
+$mobile-viewport: 320px;
+$tablet-viewport: 768px;
+$desktop-viewport: 1440px;
+// OTHER
+$border-radius: 0;

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Energy</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons//180.png">
+  <link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/lato/Lato-Regular.woff2" type="font/woff2" crossorigin="anonymous" as="font">
+  <link rel="preload" href="/fonts/oswald/oswaldregular.woff2" type="font/woff2" crossorigin="anonymous" as="font">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body class="page__body">
+  <header class="header header--no-js">
+    <div class="page__container">
+      <nav class="header__navigation navigation">
+        <div class="navigation__wrapper">
+          <a class="logo" href="index.html">
+            <picture>
+              <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+              <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+              <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
+            </picture>
+          </a>
+          <a class="logo" href="index.html">
+            <picture>
+              <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
+              <img class="logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy">
+            </picture>
+          </a>
+          <button class="navigation__menu-button" type="button">
+            <span class="visually-hidden">Переключение меню</span>
+          </button>
+        </div>
+        <ul class="navigation__list navigation__list--no-js">
+          <li class="navigation__item">
+            <a class="navigation__link link" href="index.html">
+              главная
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link link" href="catalog.html">
+              каталог продукции
+            </a>
+          </li>
+          <li class="navigation__item navigation__item--current">
+            <a class="navigation__link link" href="#">
+              подбор программы
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalog">
+      <h2 class="catalog__title">Подбор программы</h2>
+      <p>Страница находится в разработке</p>
+    </section>
+  </main>
+
+  <footer>
+    <section class="map map--accent">
+      <h2 class="visually-hidden">Карта</h2>
+      <div class="map__content page__container">
+        <div class="map__invitation invitation">
+          <div class="invitation__title">приглашаем <br>к сотрудничеству<br>дилеров!</div>
+          <div class="invitation__address">
+            <span>ул. Большая <br> Конюшенная, д. 19/8</span>
+            <span>Санкт-Петербург</span>
+          </div>
+        </div>
+      </div>
+      <div class="map__wrapper">
+        <div class="map__interactive-map map__interactive-map--no-js">
+          <div class="interactive-map">
+            <iframe class="interactive-map__frame" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=30.320359%2C59.937914&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&utm_campaign=desktop&utm_medium=search&utm_source=maps&z=15.7" allowfullscreen width="100%" height="400"></iframe>
+          </div>
+        </div>
+        <picture>
+          <source width="1440" height="400" media="(min-width: 1440px)" type="image/jpg" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
+          <source width="768" height="400" media="(min-width: 768px)" type="image/jpg" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
+          <img class="map__image" loading="lazy" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта">
+        </picture>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="contacts__wrapper page__container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <a class="contacts__logo logo" href="index.html">
+          <img class="logo__image" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
+        </a>
+        <div class="contacts__social">
+          <ul class="social">
+            <li>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
+            </li>
+            <li>
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Мы в Ютубе</span></a>
+            </li>
+            <li>
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <a class="contacts__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">HTML Academy</span>
+          <div class="copyright__image"></div>
+        </a>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+.subcription {
+  padding: 40px 0;
+  position: relative;
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: 100%;
+    padding-bottom: 55px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding-bottom: 80px;
+  }
+}
+
+.subcription__title {
+  @include title-with-line(50px);
+  padding-right: 35px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    @include title-with-line(71px);
+    padding: 20px 40px 65px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding: 10px 40px 70px;
+  }
+}
+
+.subcription__description {
+  font-family: $header-font;
+  font-weight: 400;
+  color: $header-primary-text-color;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 32px 0 23px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 40px;
+  }
+}
+
+.subcription__form {
+  width: 100%;
+  display: grid;
+  grid-row-gap: 15px;
+  grid-auto-flow: row;
+
+  @media screen and (min-width: $tablet-viewport) {
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 40px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding: 25px 235px;
+  }
+}
+
+.subcription__label {
+  @media screen and (min-width: $tablet-viewport) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    flex-shrink: 1;
+  }
+}
+
+.subcription__control {
+  font-family: $header-font;
+  font-weight: 400;
+  color: $primary-text-color;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+  width: 100%;
+  padding: 12px 10px;
+  box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    height: 56px;
+  }
+}
+
+.subcription__control--error {
+  border: 1px solid #ff8282;
+}
+
+.subcription__button {
+  width: 100%;
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: 430px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: 256px;
+    flex-shrink: 0;
+  }
+}

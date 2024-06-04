@@ -1,0 +1,75 @@
+.promo {
+  background: linear-gradient(to top, rgba($bg-primary-color, 0.85) 0%, rgba($bg-primary-color, 0.85) 100%), url("/images/cat-gift@1x.png") top center/contain no-repeat;
+  padding: 50px 0 45px;
+  cursor: pointer;
+
+  @media screen and (min-resolution: 2dppx) {
+    background: linear-gradient(to top, rgba($bg-primary-color, 0.85) 0%, rgba($bg-primary-color, 0.85) 100%), url("/images/cat-gift@2x.png") top center/contain no-repeat;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 78px;
+    height: 80px;
+    background: url("/icons/stack.svg#gift") center/100% no-repeat;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    position: relative;
+    padding: 71px 0 70px;
+    background:
+      linear-gradient(to top, rgba($bg-primary-color, 0.85) 0%, rgba($bg-primary-color, 0.85) 100%),
+      url("/images/cat-gift@1x.png") 10px 60%/cover no-repeat,
+      linear-gradient(to bottom, #1f1f1f 0%, #292929 100%);
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 22%;
+      transform: translate(-100%, -50%);
+    }
+  }
+
+  @media screen and (min-width: $tablet-viewport) and (min-resolution: 2dppx) {
+    background:
+      linear-gradient(to top, rgba($bg-primary-color, 0.85) 0%, rgba($bg-primary-color, 0.85) 100%),
+      url("/images/cat-gift@2x.png") 10px 60%/cover no-repeat,
+      linear-gradient(to bottom, #1f1f1f 0%, #292929 100%);
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding: 0;
+    height: 288px;
+
+    &::before {
+      top: 17%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.promo__description {
+  padding-top: 40px;
+  text-align: center;
+  font-family: $primary-font;
+  font-weight: 400;
+  color: $accent-text-color;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    padding-left: 60%;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding-left: 0;
+    padding-top: 180px;
+    text-align: center;
+  }
+}

@@ -1,5 +1,25 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  position: relative;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $desktop-viewport) {
+    position: absolute;
+    padding-top: 45px;
+    top: 0;
+    left: 0;
+  }
+}
+
+.header--no-js {
+  min-height: 240px;
+}
+
+.header__navigation {
+  @media screen and (min-width: $tablet-viewport) {
+    padding-top: 20px;
+  }
 }

@@ -1,0 +1,196 @@
+.program {
+  position: relative;
+  background-color: $bg-accent-color;
+  min-height: 266px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    top: 25px;
+    left: 20px;
+    position: absolute;
+    width: 50px;
+    min-height: 50px;
+    background-color: $bg-primary-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
+    padding: 20px;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    min-height: 372px;
+    width: 100%;
+    padding: 60px 53px;
+
+    &::before {
+      top: 50%;
+      left: 75%;
+      transform: translate(-43%, -47%);
+      width: 200px;
+      height: 200px;
+    }
+
+    &::after {
+      top: 50%;
+      left: 75%;
+      transform: translate(-45%, -53%);
+      width: 200px;
+      height: 200px;
+      padding: 40px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    min-height: 374px;
+
+    &::before {
+      top: 35px;
+      left: 35px;
+      transform: translate(0, 0);
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+    }
+
+    &::after {
+      top: 25px;
+      left: 25px;
+      transform: translate(0, 0);
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+    }
+  }
+}
+
+.program--slim {
+  &::after {
+    background-image: url("/icons/stack.svg#cat-sit");
+    background-size: 36px 50px;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    &::after {
+      background-size: 140px 194px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    &::after {
+      background-size: 70px 97px;
+    }
+  }
+}
+
+.program--pro {
+  &::after {
+    background-image: url("/icons/stack.svg#cat-walk");
+    background-size: 67px 28px;
+    top: 4px;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    &::after {
+      top: 50%;
+      background-size: 268px 112px;
+      transform: translate(-45%, -48%);
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    &::after {
+      background-size: 134px 567px;
+      top: 30px;
+      left: 35px;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.program__header {
+  font-family: $header-font;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 0 30px 70px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 18px 0 22px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding: 25px 0 70px 162px;
+  }
+}
+
+.program__content {
+  @include standard-content-font();
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: 340px;
+    padding-bottom: 40px;
+    border-bottom: none;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+}
+
+.program__link {
+  position: relative;
+  background-color: transparent;
+  color: $header-primary-text-color;
+  font-family: $header-font;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  font-size: 16px;
+  line-height: 16px;
+
+
+  &::after {
+    content: "";
+    top: 5px;
+    right: -40px;
+    position: absolute;
+    height: 12px;
+    width: 24px;
+    background-color: $header-primary-text-color;
+    mask-image: url("/icons/stack.svg#arrow");
+    mask-repeat: no-repeat;
+    mask-size: 24px 12px;
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    font-size: 20px;
+    line-height: auto;
+
+    &::after {
+      top: 8px;
+      right: -50px;
+    }
+  }
+}
