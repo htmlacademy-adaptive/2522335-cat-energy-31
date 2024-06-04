@@ -5,6 +5,8 @@
 
   @media screen and (min-width: $desktop-viewport) {
     background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -33,9 +35,11 @@
     font-size: 16px;
     line-height: 20px;
     align-items: flex-end;
+    text-align: right;
   }
 
   @media screen and (min-width: $desktop-viewport) {
     align-items: flex-start;
+    text-align: left;
   }
 }

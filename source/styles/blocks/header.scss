@@ -6,10 +6,16 @@
   justify-content: center;
   align-items: center;
 
-
   @media screen and (min-width: $desktop-viewport) {
     position: absolute;
+    padding-top: 45px;
+    top: 0;
+    left: 0;
   }
+}
+
+.header--no-js {
+  min-height: 240px;
 }
 
 .header__navigation {

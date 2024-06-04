@@ -10,14 +10,18 @@
   background-color: transparent;
 
   @media screen and (min-width: $tablet-viewport) {
-    padding: 40px 0;
+    padding: 37px 0 40px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding-top: 47px;
   }
 }
 
 .contacts__logo {
-  padding: 10px 0;
+  padding: 20px 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -31,7 +35,7 @@
 
 .contacts__social {
   @include flex-column-center();
-  padding: 10px 0;
+  padding: 20px 0;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   width: 100%;
@@ -39,14 +43,35 @@
   @media screen and (min-width: $tablet-viewport) {
     border: none;
     width: fit-content;
+    padding-left: 40px;
   }
 }
 
 .contacts__copyright {
-  padding: 10px 0;
+  padding: 20px 0;
   width: 100%;
 
   @media screen and (min-width: $tablet-viewport) {
-    width: 168px;
+    width: 162px;
+  }
+}
+
+.copyright__text {
+  &:hover {
+    color: $bg-primary-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__image {
+  &:hover {
+    background-color: $bg-primary-color;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

@@ -1,5 +1,14 @@
 .instructions {
   padding-bottom: 50px;
+
+  @media screen and (min-width: $tablet-viewport) {
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    border-bottom: none;
+  }
 }
 
 .instructions__header {
@@ -12,14 +21,16 @@
   grid-gap: 20px;
 
   @media screen and (min-width: $tablet-viewport) {
-    grid-gap: 80px;
+    grid-gap: 37px 60px;
     grid-template-columns: 1fr 1fr;
     counter-reset: element;
+    margin-top: 32px;
   }
 
   @media screen and (min-width: $desktop-viewport) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 

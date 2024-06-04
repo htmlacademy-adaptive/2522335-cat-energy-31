@@ -1,15 +1,32 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .logo {
+  background-color: transparent;
 
+  &:link,
+  &:visited {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo__image {
-  margin-right: 10px;
   display: block;
+
+  @media screen and (min-width: $tablet-viewport) {
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    margin-right: 15px;
+  }
 }
 
 .logo__text {
-
+  margin-right: 10px;
 }

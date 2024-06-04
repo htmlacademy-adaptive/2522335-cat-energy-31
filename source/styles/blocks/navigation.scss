@@ -21,8 +21,8 @@
 }
 
 .navigation__menu-button {
-  height: 18px;
-  width: 18px;
+  height: 24px;
+  width: 25px;
   background-image: url("/icons/stack.svg#burger-menu");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -36,6 +36,8 @@
 
 .navigation__menu-button--open {
   background-image: url("/icons/stack.svg#close");
+  width: 25px;
+  height: 20px;
 }
 
 
@@ -57,10 +59,12 @@
     position: relative;
     width: 436px;
     top: 0;
+    padding: 0 5px;
   }
 
   @media screen and (min-width: $desktop-viewport) {
     background-color: transparent;
+    width: 475px;
   }
 }
 
@@ -68,17 +72,10 @@
   display: flex;
 }
 
-.navigation__list--accent-color {
-  .navigation__item--current.navigation__item--current {
-    @media screen and (min-width: $desktop-viewport) {
-      color: $accent-text-color;
-      border-bottom: 1px solid $accent-text-color;
-    }
-  }
-
-  @media screen and (min-width: $desktop-viewport) {
-    color: $accent-text-color;
-  }
+.navigation__list--no-js {
+  display: block;
+  top: 0;
+  position: relative;
 }
 
 .navigation__item {
@@ -116,16 +113,35 @@
       &::after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         left: 0;
         right: 0;
-        border-bottom: 1px solid $bg-primary-color;
+        border-bottom: 2px solid $bg-primary-color;
       }
     }
 
     @media screen and (min-width: $desktop-viewport) {
-      border-bottom: 2px solid $bg-primary-color;
+      &::after {
+        border-bottom: 2px solid $bg-primary-color;
+      }
     }
+  }
+}
+
+.navigation__list--accent-color {
+  .navigation__item--current {
+    @media screen and (min-width: $desktop-viewport) {
+      color: $accent-text-color;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &::after {
+        border-bottom: 2px solid $accent-text-color;
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    color: $accent-text-color;
   }
 }
 

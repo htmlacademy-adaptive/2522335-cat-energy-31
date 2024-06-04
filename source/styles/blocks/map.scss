@@ -3,7 +3,7 @@
   grid-auto-flow: row;
   row-gap: 0;
   background-color: #ffffff;
-  overflow-x: hidden;
+  overflow: hidden hidden;
   position: relative;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .map__invitation {
-  margin: 20px 0;
+  margin: 27px 0;
 
   @media screen and (min-width: $tablet-viewport) {
     margin: 60px auto;
@@ -27,11 +27,12 @@
 
   @media screen and (min-width: $desktop-viewport) {
     position: absolute;
-    background-color: #ffffff;
     top: 0;
     left: 0;
-    padding: 60px;
-    transform: translateY(40px);
+    width: 405px;
+    padding: 60px 80px;
+    background-color: #ffffff;
+    transform: translateY(35px);
     z-index: 2;
   }
 }
@@ -53,4 +54,25 @@
   @media screen and (min-width: $desktop-viewport) {
     width: $desktop-viewport;
   }
+}
+
+.map__interactive-map {
+  position: absolute;
+  inset: 0;
+  width: $mobile-viewport;
+  height: 362px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-viewport) {
+    width: $tablet-viewport;
+    height: 400px;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    width: $desktop-viewport;
+  }
+}
+
+.map__interactive-map--no-js {
+  display: none;
 }

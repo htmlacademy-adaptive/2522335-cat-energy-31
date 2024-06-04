@@ -1,8 +1,13 @@
 .programs {
   padding: 20px 0;
 
+  @media screen and (min-width: $tablet-viewport) {
+    margin-bottom: 25px;
+  }
+
   @media screen and (min-width: $desktop-viewport) {
     padding: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -10,8 +15,12 @@
   display: grid;
   grid-gap: 20px;
 
+  @media screen and (min-width: $tablet-viewport) {
+    grid-gap: 30px;
+  }
+
   @media screen and (min-width: $desktop-viewport) {
-    padding: 80px 0;
+    padding: 80px 0 70px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
   }

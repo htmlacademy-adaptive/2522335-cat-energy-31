@@ -37,17 +37,34 @@
       opacity: 0.1;
       font-family: $header-font;
       text-align: center;
+      transform: translateX(20px);
     }
   }
 
   @media screen and (min-width: $desktop-viewport) {
-    width: 246px;
+    width: 250px;
+
+    &::after {
+      transform: translateX(60px);
+    }
   }
 }
 
 .step--first {
   &::before {
     background-image: url("/icons/stack.svg#leaf");
+  }
+
+  @media screen and (min-width: $tablet-viewport) {
+    &::after {
+      transform: translateX(10px);
+    }
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    &::after {
+      transform: translateX(50px);
+    }
   }
 }
 
@@ -74,6 +91,10 @@
   padding-left: 80px;
 
   @media screen and (min-width: $tablet-viewport) {
-    padding: 100px 0 0;
+    padding: 110px 80px 0 0;
+  }
+
+  @media screen and (min-width: $desktop-viewport) {
+    padding-right: 5px;
   }
 }

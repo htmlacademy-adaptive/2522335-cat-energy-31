@@ -84,6 +84,35 @@ $demo-width-middle: 560px;
     object-fit: none;
   }
 
+  &:hover,
+  &:focus {
+    border: 2px solid $bg-primary-color;
+
+    &::before {
+      border: 2px solid $bg-primary-color;
+    }
+
+    &::after {
+      background-color: $bg-primary-color;
+    }
+  }
+
+  &:active {
+    border: 2px solid $slider-color;
+    opacity: 0.3;
+
+    &::before {
+      border: 2px solid $bg-primary-color;
+      opacity: 0.3;
+    }
+
+    &::after {
+      background-color: $bg-primary-color;
+      opacity: 0.3;
+    }
+  }
+
+
   @media screen and (min-width: $tablet-viewport) {
     height: $demo-height-middle;
   }

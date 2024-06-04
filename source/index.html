@@ -9,17 +9,20 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons//180.png">
-  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/lato/Lato-Regular.woff2" type="font/woff2" crossorigin="anonymous" as="font">
+  <link rel="preload" href="/fonts/oswald/oswaldregular.woff2" type="font/woff2" crossorigin="anonymous" as="font">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header header--no-js" data-test="header">
     <div class="page__container">
       <nav class="header__navigation navigation" id="nav">
         <div class="navigation__wrapper">
           <a class="logo" href="#">
             <picture>
+              <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
               <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
               <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании">
             </picture>
@@ -34,8 +37,8 @@
             <span class="visually-hidden">Переключение меню</span>
           </button>
         </div>
-        <ul class="navigation__list navigation__list--accent-color">
-          <li class="navigation__item navigation__item--current ">
+        <ul class="navigation__list navigation__list--accent-color navigation__list--no-js">
+          <li class="navigation__item navigation__item--current">
             <a class="navigation__link link" href="index.html">
               главная
             </a>
@@ -46,7 +49,7 @@
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link link" href="#">
+            <a class="navigation__link link" href="program-selection.html">
               подбор программы
             </a>
           </li>
@@ -56,8 +59,8 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero__wrapper page__container">
+    <section class="hero" data-test="hero">
+      <div class="page__container hero__wrapper">
         <h2 class="hero__title">Функциональное <br>питание для котов
         </h2>
         <p class="hero__content">Занялся собой? Займись котом!</p>
@@ -66,13 +69,13 @@
           <source width="709" height="609" media="(min-width: 768px)" type="image/png" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x">
           <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Cat energy product">
         </picture>
-        <a class="hero__link link button button--middle" href="#">
+        <a class="hero__link link button button--middle" href="program-selection.html">
           Подобрать программу
         </a>
       </div>
     </section>
 
-    <section class="programs">
+    <section class="programs" data-test="programs">
       <div class="page__container">
         <h2 class="visually-hidden">Выбор программы</h2>
         <ul class="programs__list">
@@ -82,7 +85,7 @@
             </h3>
             <p class="program__content">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
               Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="program__link link" href="#">каталог slim</a>
+            <a class="program__link link" href="catalog.html">каталог slim</a>
           </li>
           <li class="program program--pro">
             <h3 class="program__header">
@@ -90,13 +93,13 @@
             </h3>
             <p class="program__content">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="program__link link" href="#">каталог pro</a>
+            <a class="program__link link" href="catalog.html">каталог pro</a>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="instructions">
+    <section class="instructions" data-test="features">
       <div class="page__container">
         <h2 class="instructions__header">Как это работает</h2>
         <ul class="instructions__list">
@@ -124,7 +127,7 @@
       </div>
     </section>
 
-    <section class="experience">
+    <section class="experience" data-test="proof">
       <div class="page__container">
         <div class="experience__wrapper">
           <h2 class="experience__header">Живой пример</h2>
@@ -136,18 +139,18 @@
             </p>
             <div class="experience__statistic">
               <ul class="experience__list">
-                <li class="experience__item statistic-card">
-                  <p class="statistic-card__content">5 кг</p>
-                  <p class="statistic-card__caption">снижение веса</p>
+                <li>
+                  <p class="experience__card-content">5 кг</p>
+                  <div class="experience__card-caption">снижение веса</div>
                 </li>
-                <li class="experience__item statistic-card">
-                  <p class="statistic-card__content">60 дней</p>
-                  <p class="statistic-card__caption">затрачено времени</p>
+                <li>
+                  <p class="experience__card-content">60 дней</p>
+                  <div class="experience__card-caption">затрачено времени</div>
                 </li>
               </ul>
               <div class="experience__footer costs">
                 <span class="costs__title">затраты на питание:</span>
-                <span class="costs__content">15 000 руб.</span>
+                <span>15 000 руб.</span>
               </div>
             </div>
           </div>
@@ -155,13 +158,13 @@
             <div class="demo__image-container">
               <picture>
                 <source width="560" height="512" media="(min-width: 768px)" type="image/png" srcset="images/fatcat-tablet@1x.png 1x, images/fatcat-tablet@2x.png 2x">
-                <img class="demo__image demo__image--before" src="images/fatcat-mobile@1x.png" srcset="images/fatcat-mobile@2x.png 2x" width="280" height="256" alt="Питомец до">
+                <img class="demo__image demo__image--before" loading="lazy" src="images/fatcat-mobile@1x.png" srcset="images/fatcat-mobile@2x.png 2x" width="280" height="256" alt="Питомец до">
               </picture>
             </div>
             <div class="demo__image-container">
               <picture>
                 <source width="560" height="512" media="(min-width: 768px)" type="image/png" srcset="images/thincat-tablet@1x.png 1x, images/thincat-tablet@2x.png 2x">
-                <img class="demo__image demo__image--after" src="images/thincat-mobile@1x.png" srcset="images/thincat-mobile@2x.png 2x" width="280" height="256" alt="Питомец после">
+                <img class="demo__image demo__image--after" loading="lazy" src="images/thincat-mobile@1x.png" srcset="images/thincat-mobile@2x.png 2x" width="280" height="256" alt="Питомец после">
               </picture>
             </div>
             <div class="demo__slider"></div>
@@ -172,7 +175,7 @@
   </main>
 
   <footer>
-    <section class="map">
+    <section class="map" data-test="contacts">
       <h2 class="visually-hidden">Карта</h2>
       <div class="map__content page__container">
         <div class="map__invitation invitation">
@@ -184,50 +187,45 @@
         </div>
       </div>
       <div class="map__wrapper">
+        <div class="map__interactive-map map__interactive-map--no-js">
+          <div class="interactive-map">
+            <iframe class="interactive-map__frame" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=30.320359%2C59.937914&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&utm_campaign=desktop&utm_medium=search&utm_source=maps&z=15.7" allowfullscreen width="100%" height="400"></iframe>
+          </div>
+        </div>
         <picture>
           <source width="1440" height="400" media="(min-width: 1440px)" type="image/jpg" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
           <source width="768" height="400" media="(min-width: 768px)" type="image/jpg" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
-          <img class="map__image" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта">
+          <img class="map__image" loading="lazy" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта">
         </picture>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" data-test="footer">
       <div class="contacts__wrapper page__container">
         <h2 class="visually-hidden">Контакты</h2>
-        <a class="contacts__logo logo" href="index.html">
+        <a class="contacts__logo logo" href="index.html#nav">
           <img class="logo__image" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
         </a>
         <div class="contacts__social">
           <ul class="social">
-            <li class="social__item">
+            <li>
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
             </li>
-            <li class="social__item">
+            <li>
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Мы в Ютубе</span></a>
             </li>
-            <li class="social__item">
+            <li>
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме</span></a>
             </li>
           </ul>
         </div>
 
-        <a class="contacts__copyright copyright" href="#nav">
+        <a class="contacts__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">HTML Academy</span>
           <div class="copyright__image"></div>
         </a>
       </div>
     </section>
   </footer>
-  <script>
-    // для временной демонстрации работы кнопки меню
-    let menu = document.querySelector(".navigation__menu-button");
-    let navigation = document.querySelector(".navigation__list");
-    menu.addEventListener("click", () => {
-      menu.classList.toggle("navigation__menu-button--open");
-      navigation.classList.toggle("navigation__list--open");
-    }
-    );
-  </script>
 </body>
 
 </html>

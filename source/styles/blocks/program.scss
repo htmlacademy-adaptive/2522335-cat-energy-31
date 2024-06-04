@@ -8,7 +8,7 @@
 
   &::before {
     content: "";
-    top: 20px;
+    top: 25px;
     left: 20px;
     position: absolute;
     width: 50px;
@@ -34,12 +34,12 @@
   @media screen and (min-width: $tablet-viewport) {
     min-height: 372px;
     width: 100%;
-    padding: 60px 50px;
+    padding: 60px 53px;
 
     &::before {
       top: 50%;
       left: 75%;
-      transform: translate(-50%, -50%);
+      transform: translate(-43%, -47%);
       width: 200px;
       height: 200px;
     }
@@ -47,7 +47,7 @@
     &::after {
       top: 50%;
       left: 75%;
-      transform: translate(-50%, -50%);
+      transform: translate(-45%, -53%);
       width: 200px;
       height: 200px;
       padding: 40px;
@@ -58,8 +58,8 @@
     min-height: 374px;
 
     &::before {
-      top: 0;
-      left: 0;
+      top: 35px;
+      left: 35px;
       transform: translate(0, 0);
       width: 100px;
       height: 100px;
@@ -67,8 +67,8 @@
     }
 
     &::after {
-      top: 0;
-      left: 0;
+      top: 25px;
+      left: 25px;
       transform: translate(0, 0);
       width: 100px;
       height: 100px;
@@ -100,17 +100,23 @@
   &::after {
     background-image: url("/icons/stack.svg#cat-walk");
     background-size: 67px 28px;
+    top: 4px;
   }
 
   @media screen and (min-width: $tablet-viewport) {
     &::after {
+      top: 50%;
       background-size: 268px 112px;
+      transform: translate(-45%, -48%);
     }
   }
 
   @media screen and (min-width: $desktop-viewport) {
     &::after {
       background-size: 134px 567px;
+      top: 30px;
+      left: 35px;
+      transform: translate(0, 0);
     }
   }
 }
@@ -121,30 +127,34 @@
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 5px 0 20px 90px;
+  padding: 10px 0 30px 70px;
 
   @media screen and (min-width: $tablet-viewport) {
     font-size: 36px;
     line-height: 36px;
-    padding: 0 0 40px;
+    padding: 18px 0 22px;
   }
 
   @media screen and (min-width: $desktop-viewport) {
-    padding: 15px 0 60px 150px;
+    padding: 25px 0 70px 162px;
   }
 }
 
 .program__content {
   @include standard-content-font();
   padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
 
   @media screen and (min-width: $tablet-viewport) {
     width: 340px;
     padding-bottom: 40px;
+    border-bottom: none;
   }
 
   @media screen and (min-width: $desktop-viewport) {
     width: 100%;
+    padding-bottom: 15px;
   }
 }
 
@@ -163,8 +173,8 @@
 
   &::after {
     content: "";
+    top: 5px;
     right: -40px;
-    top: 9px;
     position: absolute;
     height: 12px;
     width: 24px;
@@ -177,5 +187,10 @@
   @media screen and (min-width: $tablet-viewport) {
     font-size: 20px;
     line-height: auto;
+
+    &::after {
+      top: 8px;
+      right: -50px;
+    }
   }
 }

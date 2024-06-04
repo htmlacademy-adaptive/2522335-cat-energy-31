@@ -9,22 +9,25 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons//180.png">
-  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/lato/Lato-Regular.woff2" type="font/woff2" crossorigin="anonymous" as="font">
+  <link rel="preload" href="/fonts/oswald/oswaldregular.woff2" type="font/woff2" crossorigin="anonymous" as="font">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header header--no-js" data-test="header">
     <div class="page__container">
       <nav class="header__navigation navigation">
         <div class="navigation__wrapper">
           <a class="logo" href="index.html">
             <picture>
+              <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
               <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
               <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
             </picture>
           </a>
-          <a class="logo" href="#">
+          <a class="logo" href="index.html">
             <picture>
               <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
               <img class="logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy">
@@ -34,19 +37,19 @@
             <span class="visually-hidden">Переключение меню</span>
           </button>
         </div>
-        <ul class="navigation__list">
+        <ul class="navigation__list navigation__list--no-js">
           <li class="navigation__item">
-            <a class="navigation__link" href="index.html">
+            <a class="navigation__link link" href="index.html">
               главная
             </a>
           </li>
           <li class="navigation__item navigation__item--current">
-            <a class="navigation__link" href="catalog.html">
+            <a class="navigation__link link" href="#">
               каталог продукции
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">
+            <a class="navigation__link link" href="program-selection.html">
               подбор программы
             </a>
           </li>
@@ -56,7 +59,7 @@
   </header>
 
   <main>
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <h2 class="catalog__title">Каталог продукции</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -65,8 +68,8 @@
               <source width="200" height="210" media="(min-width: 768px)" type="image/png" srcset="images/card-1-tablet@1x.png 1x,images/card-1-tablet@2x.png 2x">
               <img class="card__image" src="images/card-1-mobile@1x.png" srcset="images/card-1-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy Pro Курица 500 г">
             </picture>
-            <div class="card__content">
-              <h4 class="card__title">cat energy<br> pro 500 г</h4>
+            <a class="card__content" href="#">
+              <h4 class="card__title">cat energy<br class="card__mobile-breakpoint"> pro <br class="card__tablet-breakpoint">500 г</h4>
               <ul class="card__list">
                 <li class="card__item">
                   <span>Масса</span>
@@ -81,7 +84,7 @@
                   <span>700 &#8381;</span>
                 </li>
               </ul>
-            </div>
+            </a>
             <button class="card__button button button--small" type="button">заказать</button>
           </div>
         </li>
@@ -91,8 +94,8 @@
               <source width="200" height="210" media="(min-width: 768px)" type="image/png" srcset="images/card-2-tablet@1x.png 1x,images/card-2-tablet@2x.png 2x">
               <img class="card__image" src="images/card-2-mobile@1x.png" srcset="images/card-2-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy Pro Курица 1000 г">
             </picture>
-            <div class="card__content">
-              <h4 class="card__title">cat energy <br>pro 1000 г</h4>
+            <a class="card__content" href="#">
+              <h4 class="card__title">cat energy <br class="card__mobile-breakpoint">pro <br class="card__tablet-breakpoint"> 1000 г</h4>
               <ul class="card__list">
                 <li class="card__item">
                   <span>Масса</span>
@@ -107,7 +110,7 @@
                   <span>1000 &#8381;</span>
                 </li>
               </ul>
-            </div>
+            </a>
             <button class="card__button button button--small" type="button">заказать</button>
           </div>
         </li>
@@ -117,8 +120,8 @@
               <source width="200" height="210" media="(min-width: 768px)" type="image/png" srcset="images/card-3-tablet@1x.png 1x,images/card-3-tablet@2x.png 2x">
               <img class="card__image" src="images/card-3-mobile@1x.png" srcset="images/card-3-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy Pro Рыба 500 г">
             </picture>
-            <div class="card__content">
-              <h4 class="card__title">cat energy<br> pro 500 г</h4>
+            <a class="card__content" href="#">
+              <h4 class="card__title">cat energy<br class="card__mobile-breakpoint"> pro<br class="card__tablet-breakpoint"> 500 г</h4>
               <ul class="card__list">
                 <li class="card__item">
                   <span>Масса</span>
@@ -133,7 +136,7 @@
                   <span>700 &#8381;</span>
                 </li>
               </ul>
-            </div>
+            </a>
             <button class="card__button button button--small" type="button">заказать</button>
           </div>
         </li>
@@ -143,8 +146,8 @@
               <source width="200" height="210" media="(min-width: 768px)" type="image/png" srcset="images/card-4-tablet@1x.png 1x,images/card-4-tablet@2x.png 2x">
               <img class="card__image" src="images/card-4-mobile@1x.png" srcset="images/card-4-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy Pro Рыба 1000 г">
             </picture>
-            <div class="card__content">
-              <h4 class="card__title">cat energy<br> pro 1000 г</h4>
+            <a class="card__content" href="#">
+              <h4 class="card__title">cat energy<br class="card__mobile-breakpoint"> pro<br class="card__tablet-breakpoint"> 1000 г</h4>
               <ul class="card__list">
                 <li class="card__item">
                   <span>Масса</span>
@@ -159,7 +162,7 @@
                   <span>1000 &#8381;</span>
                 </li>
               </ul>
-            </div>
+            </a>
             <button class="card__button button button--small" type="button">заказать</button>
           </div>
         </li>
@@ -169,8 +172,8 @@
               <source width="200" height="210" media="(min-width: 768px)" type="image/png" srcset="images/card-5-tablet@1x.png 1x,images/card-5-tablet@2x.png 2x">
               <img class="card__image" src="images/card-5-mobile@1x.png" srcset="images/card-5-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy Slim Гречка 500 г">
             </picture>
-            <div class="card__content">
-              <h4 class="card__title">cat energy<br> slim 500 г</h4>
+            <a class="card__content" href="#">
+              <h4 class="card__title">cat energy<br class="card__mobile-breakpoint"> slim<br class="card__tablet-breakpoint"> 500 г</h4>
               <ul class="card__list">
                 <li class="card__item">
                   <span>Масса</span>
@@ -185,7 +188,7 @@
                   <span>400 &#8381;</span>
                 </li>
               </ul>
-            </div>
+            </a>
             <button class="card__button button button--small" type="button">заказать</button>
           </div>
         </li>
@@ -195,8 +198,8 @@
               <source width="200" height="210" media="(min-width: 768px)" type="image/png" srcset="images/card-6-tablet@1x.png 1x,images/card-6-tablet@2x.png 2x">
               <img class="card__image" src="images/card-6-mobile@1x.png" srcset="images/card-6-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy Slim Гречка 1000 г">
             </picture>
-            <div class="card__content">
-              <h4 class="card__title">cat energy<br> slim 1000 г</h4>
+            <a class="card__content" href="#">
+              <h4 class="card__title">cat energy <br class="card__mobile-breakpoint"> slim<br class="card__tablet-breakpoint"> 1000 г</h4>
               <ul class="card__list">
                 <li class="card__item">
                   <span>Масса</span>
@@ -211,7 +214,7 @@
                   <span>700 &#8381;</span>
                 </li>
               </ul>
-            </div>
+            </a>
             <button class="card__button button button--small" type="button">заказать</button>
           </div>
         </li>
@@ -221,8 +224,8 @@
               <source width="200" height="210" media="(min-width: 768px)" type="image/png" srcset="images/card-7-tablet@1x.png 1x,images/card-7-tablet@2x.png 2x">
               <img class="card__image" src="images/card-7-mobile@1x.png" srcset="images/card-7-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy Slim Рис 500 г">
             </picture>
-            <div class="card__content">
-              <h4 class="card__title">cat energy<br> slim 500 г</h4>
+            <a class="card__content" href="#">
+              <h4 class="card__title">cat energy<br class="card__mobile-breakpoint"> slim<br class="card__tablet-breakpoint"> 500 г</h4>
               <ul class="card__list">
                 <li class="card__item">
                   <span>Масса</span>
@@ -237,16 +240,16 @@
                   <span>500 &#8381;</span>
                 </li>
               </ul>
-            </div>
+            </a>
             <button class="card__button button button--small" type="button">заказать</button>
           </div>
         </li>
         <li class="catalog__item">
           <div class="card card--add">
             <div class="card__content">
-              <h4 class="card__title">показать еще 100500 товаров</h4>
+              <h4 class="card__title">показать еще<br class="card__tablet-breakpoint"> 100500 товаров</h4>
               <div class="card__item">
-                На самом деле вкусов гораздо больше!
+                На самом деле вкусов <br class="card__tablet-breakpoint">гораздо больше!
               </div>
             </div>
             <button class="card__button button button--small button--accent" type="button">показать все</button>
@@ -255,45 +258,47 @@
       </ul>
     </section>
 
-    <section class="additional-products">
+    <section class="additional-products" data-test="additional">
       <div class="page__container">
         <h3 class="additional-products__title">Дополнительные товары</h3>
-        <ul class="additional-products__list">
-          <li class="additional-products__item product">
-            <h4 class="product__title">сахарозаменитель</h4>
-            <p class="product__content">
-              <span class="product__volume">1 упаковка (100 г)</span>
-              <span class="product__price">200 &#8381;</span>
-            </p>
-            <button class="product__button button button--small" type="button">заказать</button>
-          </li>
-          <li class="additional-products__item product">
-            <h4 class="product__title">питьевая вода</h4>
-            <p class="product__content">
-              <span class="product__volume">5 литров</span>
-              <span class="product__price">50 &#8381;</span>
-            </p>
-            <button class="product__button button button--small" type="button">заказать</button>
-          </li>
-          <li class="additional-products__item product">
-            <h4 class="product__title">молоко</h4>
-            <p class="product__content">
-              <span class="product__volume">1 литр</span>
-              <span class="product__price">100 &#8381;</span>
-            </p>
-            <button class="product__button button button--small" type="button">заказать</button>
-          </li>
-          <li class="additional-products__item product">
-            <h4 class="product__title">витамины</h4>
-            <p class="product__content">
-              <span class="product__volume">1 упаковка (30 г)</span>
-              <span class="product__price">300 &#8381;</span>
-            </p>
-            <button class="product__button button button--small" type="button">заказать</button>
-          </li>
-        </ul>
-        <div class="additional-products__promo promo">
-          <div class="promo__description">Закажите все <br>и получите чехол для <br>кота в подарок!</div>
+        <div class="additional-products__content">
+          <ul class="additional-products__list">
+            <li class="additional-products__item product">
+              <h4 class="product__title">сахарозаменитель</h4>
+              <p class="product__content">
+                <span class="product__volume">1 упаковка (100 г)</span>
+                <span class="product__price">200 &#8381;</span>
+              </p>
+              <button class="product__button button button--small" type="button">заказать</button>
+            </li>
+            <li class="additional-products__item product">
+              <h4 class="product__title">питьевая вода</h4>
+              <p class="product__content">
+                <span class="product__volume">5 литров</span>
+                <span class="product__price">50 &#8381;</span>
+              </p>
+              <button class="product__button button button--small" type="button">заказать</button>
+            </li>
+            <li class="additional-products__item product">
+              <h4 class="product__title">молоко</h4>
+              <p class="product__content">
+                <span class="product__volume">1 литр</span>
+                <span class="product__price">100 &#8381;</span>
+              </p>
+              <button class="product__button button button--small" type="button">заказать</button>
+            </li>
+            <li class="additional-products__item product">
+              <h4 class="product__title">витамины</h4>
+              <p class="product__content">
+                <span class="product__volume">1 упаковка (30 г)</span>
+                <span class="product__price">300 &#8381;</span>
+              </p>
+              <button class="product__button button button--small" type="button">заказать</button>
+            </li>
+          </ul>
+          <div class="additional-products__promo promo">
+            <div class="promo__description">Закажите все <br>и получите чехол для <br>кота в подарок!</div>
+          </div>
         </div>
       </div>
     </section>
@@ -327,10 +332,15 @@
         </div>
       </div>
       <div class="map__wrapper">
+        <div class="map__interactive-map map__interactive-map--no-js">
+          <div class="interactive-map">
+            <iframe class="interactive-map__frame" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=30.320359%2C59.937914&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&utm_campaign=desktop&utm_medium=search&utm_source=maps&z=15.7" allowfullscreen width="100%" height="400"></iframe>
+          </div>
+        </div>
         <picture>
           <source width="1440" height="400" media="(min-width: 1440px)" type="image/jpg" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
           <source width="768" height="400" media="(min-width: 768px)" type="image/jpg" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
-          <img class="map__image" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта">
+          <img class="map__image" loading="lazy" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта">
         </picture>
       </div>
     </section>
@@ -342,36 +352,25 @@
         </a>
         <div class="contacts__social">
           <ul class="social">
-            <li class="social__item">
+            <li>
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
             </li>
-            <li class="social__item">
+            <li>
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Мы в Ютубе</span></a>
             </li>
-            <li class="social__item">
+            <li>
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграме</span></a>
             </li>
           </ul>
         </div>
 
-        <a class="contacts__copyright copyright" href="#nav">
+        <a class="contacts__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">HTML Academy</span>
           <div class="copyright__image"></div>
         </a>
       </div>
     </section>
   </footer>
-
-  <script>
-    // для временной демонстрации работы кнопки меню
-    let menu = document.querySelector(".navigation__menu-button");
-    let navigation = document.querySelector(".navigation__list");
-    menu.addEventListener("click", () => {
-      menu.classList.toggle("navigation__menu-button--open");
-      navigation.classList.toggle("navigation__list--open");
-    }
-    );
-  </script>
 </body>
 
 </html>

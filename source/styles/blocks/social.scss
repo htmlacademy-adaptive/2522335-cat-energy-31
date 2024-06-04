@@ -1,6 +1,3 @@
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable block-no-empty */
-
 .social {
   display: flex;
   justify-content: space-between;
@@ -8,12 +5,9 @@
   height: 22px;
 }
 
-.social__item {
-
-}
-
 .social__link {
   height: 100%;
+
   &::before {
     content: "";
     width: 28px;
@@ -25,11 +19,26 @@
     object-fit: contain;
   }
 
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: $bg-primary-color;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $bg-primary-color;
+      opacity: 0.3;
+    }
+  }
+
   &.social__link--vkontakte {
     &::before {
       mask-image: url("/icons/stack.svg#vkontakte");
     }
   }
+
   &.social__link--youtube {
     &::before {
       mask-image: url("/icons/stack.svg#youtube");
